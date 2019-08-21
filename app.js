@@ -14,8 +14,16 @@ document.addEventListener('DOMContentLoaded', function(){
   addForm.addEventListener('submit', function(e){
     e.preventDefault();//prevent default behavior which is to refresh page
     const value = addForm.querySelector('input[type="text"]').value; //'input[type="text"]' is a valid css selector
+    try {
+      lastTrimPoint = parseFloat(list.lastElementChild.querySelector('.name').innerText) // value of last item in list
+    }
+    catch(error) {
+      lastTrimPoint = 0;
+    }
 
-    if(!isNaN(value)){
+    //input has to be a number and greater than the previous input
+    //in order to be appended to the list
+    if(!isNaN(value) && (value >= lastTrimPoint)){
       //create elements
       const li = document.createElement('li');
       const bookName = document.createElement('span');
