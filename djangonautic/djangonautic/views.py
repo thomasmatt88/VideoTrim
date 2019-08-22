@@ -7,9 +7,5 @@ def home(request):
 
 def trim(request):
     #if request.method == 'POST':
-    #for i in request.POST.items():
-    #    print(i)
-    #(request.POST.items())
-    #print(request.POST.get('test'))
     print(request.POST.getlist('mylist'))
     return render(request, 'index.html')
