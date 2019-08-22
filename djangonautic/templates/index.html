@@ -9,17 +9,18 @@
   </head>
   <body>
 	    <div id="book-list">
-	    	<h2 class="title">Video Trim Points</h2>
-	    	<ul>
-	    	</ul>
+        <form action="/trim" method='POST'>
+          {% csrf_token %}
+  	    	<h2 class="title">Video Trim Points</h2>
+  	    	<ul>
+  	    	</ul>
+          <button type="submit">Trim</button>
+        </form>
 	    </div>
 	    <form id="add-book">
 	    	<input type="text" placeholder="Add a trim time..." />
-	    	<button>Add</button>
+	    	<button id="add">Add</button>
 	    </form>
-      <form id="trim" action="/trim" method="POST">
-        <button>Trim</button>
-      </form>
     </div>
     <script src="{% static 'app.js' %}"></script>
   </body>

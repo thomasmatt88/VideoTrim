@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
 
   //add book-list
   const addForm = document.forms['add-book'];
-  addForm.addEventListener('submit', function(e){
+  const add = document.querySelector('#add');
+  add.addEventListener('click', function(e){
     e.preventDefault();//prevent default behavior which is to refresh page
     const value = addForm.querySelector('input[type="text"]').value; //'input[type="text"]' is a valid css selector
     try {
@@ -40,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
       //append to document...order matters
       li.appendChild(bookName);
       li.appendChild(deleteBtn);
+      li.innerHTML += "<input type='hidden' name='mylist' value='" + value + "'>";
       list.appendChild(li);
     }
 
