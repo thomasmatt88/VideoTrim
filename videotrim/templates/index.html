@@ -11,6 +11,7 @@
 	    <div id="book-list">
         <form action="/trim" method='POST'>
           {% csrf_token %}
+          <input name="video_file_path" type="text" placeholder="/path/to/videofile"/>
   	    	<h2 class="title">Video Trim Points</h2>
   	    	<ul>
   	    	</ul>
