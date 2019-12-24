@@ -9,6 +9,8 @@ Simple web application that trims and cuts video based off of user inputted trim
 5. Access application UI at http://127.0.0.1:8000/
 
 **Running Application:**
+Application saves footage **between** trim times into a new video file. Therefore, if 0, 5, 10, and 15 are your added trim times, then applicatio will save footage between 0 and 5 seconds, and between 10 and 15 seconds, into a new video file. 
+
 1. Enter global path to video file
 ![Alt text](https://github.com/thomasmatt88/VideoTrim/blob/master/images/Screen%20Shot%202019-12-23%20at%205.03.57%20PM.png)
 2. Add trim time. At least 2 trim times are necessary. Therefore, if you want to trim and save the first 5 seconds of your video, add 0 and 5 as trim times. 
