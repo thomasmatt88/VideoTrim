@@ -6,4 +6,5 @@ Simple web application that trims and cuts video based off of user inputted trim
 2. $pipenv install
 3. $cd videotrim 
 4. $pipenv run python manage.py runserver
-5. Edited video can be found in videotrim folder
+5. Access application UI at http://127.0.0.1:8000/
+6. Edited video can be found in videotrim folder
